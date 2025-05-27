@@ -1,0 +1,22 @@
+<ng-container *ngIf="auth.isAuthenticated(); else loginOnly">
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-title">Meu Sistema</div>
+      <nav>
+        <a routerLink="/home" routerLinkActive="active"><span class="icon">🏠</span> Home</a>
+        <a routerLink="/users" routerLinkActive="active"><span class="icon">👥</span> Usuários</a>
+      </nav>
+    </aside>
+    <div class="main-content">
+      <header class="topbar">
+        <span class="topbar-title">Painel Administrativo</span>
+      </header>
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  </div>
+</ng-container>
+<ng-template #loginOnly>
+  <router-outlet></router-outlet>
+</ng-template> 

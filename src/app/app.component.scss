@@ -1,0 +1,120 @@
+.main-nav {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  background: #181829;
+  padding: 1.2rem 0 0.5rem 0;
+}
+.main-nav a {
+  color: #4cffb3;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+.main-nav a.active, .main-nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px #00ffb3;
+}
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background: #181829;
+}
+.sidebar {
+  width: 220px;
+  background: #23233a;
+  color: #baffd9;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 2rem 0 2rem 0;
+  box-shadow: 2px 0 16px #00ffb322;
+}
+.sidebar-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4cffb3;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+}
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.sidebar nav a {
+  color: #baffd9;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.7rem 2rem;
+  border-radius: 8px 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  transition: background 0.2s, color 0.2s;
+}
+.sidebar nav a.active, .sidebar nav a:hover {
+  background: linear-gradient(90deg, #00ffb3 0%, #4cffb3 100%);
+  color: #181829;
+}
+.icon {
+  font-size: 1.3rem;
+}
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.topbar {
+  background: #23233a;
+  color: #4cffb3;
+  padding: 1.2rem 2rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  box-shadow: 0 2px 16px #00ffb322;
+  letter-spacing: 1px;
+}
+.topbar-title {
+  font-size: 1.2rem;
+}
+main {
+  flex: 1;
+  padding: 2rem 2vw;
+  background: #181829;
+}
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    flex-direction: row;
+    width: 100vw;
+    height: auto;
+    padding: 1rem 0;
+    box-shadow: none;
+    justify-content: center;
+  }
+  .sidebar nav {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .sidebar nav a {
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+  }
+  .main-content {
+    min-height: auto;
+  }
+  .topbar {
+    padding: 1rem 1vw;
+  }
+  main {
+    padding: 1rem 1vw;
+  }
+} 

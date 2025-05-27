@@ -1,0 +1,62 @@
+<div class="home-dashboard">
+  <div class="dashboard-cards">
+    <div class="dashboard-card">
+      <div class="card-header">
+        <span class="icon">👤</span>
+        <span class="card-title">Personagens</span>
+      </div>
+      <div class="card-value">{{total}}</div>
+      <div class="card-sub">Total</div>
+      <p-chart type="line" [data]="sparklineData" [options]="sparklineOptions" height="40px"></p-chart>
+    </div>
+    <div class="dashboard-card">
+      <div class="card-header">
+        <span class="icon">🟢</span>
+        <span class="card-title">Vivos</span>
+      </div>
+      <div class="card-value">{{vivos}}</div>
+      <div class="card-sub">Alive</div>
+      <p-chart type="line" [data]="sparklineAliveData" [options]="sparklineOptions" height="40px"></p-chart>
+    </div>
+    <div class="dashboard-card">
+      <div class="card-header">
+        <span class="icon">🔴</span>
+        <span class="card-title">Mortos</span>
+      </div>
+      <div class="card-value">{{mortos}}</div>
+      <div class="card-sub">Dead</div>
+      <p-chart type="line" [data]="sparklineDeadData" [options]="sparklineOptions" height="40px"></p-chart>
+    </div>
+    <div class="dashboard-card">
+      <div class="card-header">
+        <span class="icon">❔</span>
+        <span class="card-title">Desconhecidos</span>
+      </div>
+      <div class="card-value">{{desconhecidos}}</div>
+      <div class="card-sub">Unknown</div>
+      <p-chart type="line" [data]="sparklineUnknownData" [options]="sparklineOptions" height="40px"></p-chart>
+    </div>
+  </div>
+
+  <div class="dashboard-main">
+    <div class="main-graph">
+      <h3>Distribuição de Status</h3>
+      <p-chart type="bar" [data]="chartStatusData" [options]="chartOptions"></p-chart>
+    </div>
+    <div class="main-contacts">
+      <h3>Contatos (Personagens)</h3>
+      <div class="contacts-list">
+        <div class="contact-item" *ngFor="let user of topContacts">
+          <img [src]="user.image" [alt]="user.name" class="contact-avatar" />
+          <div class="contact-info">
+            <div class="contact-name">{{user.name}}</div>
+            <div class="contact-tags">
+              <span class="tag" [ngClass]="user.status.toLowerCase()">{{user.status}}</span>
+              <span class="tag species">{{user.species}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

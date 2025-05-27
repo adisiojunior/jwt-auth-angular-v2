@@ -1,0 +1,30 @@
+# Angular
+.angular/
+node_modules/
+dist/
+.tmp/
+
+# IDEs e editores
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ambiente
+.env
+.env.*
+
+# Testes
+coverage/
+
+# Outros
+package-lock.json 

@@ -1,0 +1,227 @@
+.home-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  background: #23233a;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 #00ffb355;
+  padding: 2rem;
+  color: #baffd9;
+  text-align: center;
+}
+h2 {
+  color: #4cffb3;
+  margin-bottom: 2rem;
+}
+.summary-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+.summary-card {
+  background: #181829;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px #00ffb322;
+  padding: 1.2rem 2.2rem;
+  min-width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.summary-card.total { border-left: 5px solid #4cffb3; }
+.summary-card.vivos { border-left: 5px solid #00ffb3; }
+.summary-card.mortos { border-left: 5px solid #ff4c4c; }
+.summary-card.desconhecidos { border-left: 5px solid #baffd9; }
+.summary-title {
+  color: #baffd9;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+.summary-value {
+  color: #4cffb3;
+  font-size: 2rem;
+  font-weight: 900;
+}
+.charts-row {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.chart-box {
+  background: #181829;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px #00ffb322;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  min-width: 320px;
+  max-width: 420px;
+  flex: 1 1 350px;
+  margin-bottom: 2rem;
+}
+.chart-box h3 {
+  color: #4cffb3;
+  margin-bottom: 1.2rem;
+}
+@media (max-width: 900px) {
+  .charts-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .summary-cards {
+    gap: 1rem;
+  }
+}
+
+.home-dashboard {
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 1vw;
+}
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.dashboard-card {
+  background: #23233a;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px #00ffb322;
+  padding: 1.2rem 1.5rem 0.7rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 160px;
+  position: relative;
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+.icon {
+  font-size: 1.5rem;
+}
+.card-title {
+  color: #baffd9;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.card-value {
+  color: #4cffb3;
+  font-size: 2.1rem;
+  font-weight: 900;
+  margin-bottom: 0.2rem;
+}
+.card-sub {
+  color: #baffd9;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.dashboard-card p-chart {
+  width: 100%;
+  min-height: 40px;
+  margin-top: 0.2rem;
+}
+.dashboard-main {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  gap: 2rem;
+}
+.main-graph, .main-contacts {
+  background: #23233a;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px #00ffb322;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  margin-bottom: 2rem;
+}
+.main-graph h3, .main-contacts h3 {
+  color: #4cffb3;
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+}
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #292945;
+}
+.contact-item:last-child {
+  border-bottom: none;
+}
+.contact-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #00ffb3cc;
+}
+.contact-info {
+  flex: 1;
+}
+.contact-name {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.contact-tags {
+  margin-top: 0.2rem;
+  display: flex;
+  gap: 0.5rem;
+}
+.tag {
+  border-radius: 8px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: #baffd9;
+  color: #23233a;
+}
+.tag.alive {
+  background: #00ffb3;
+  color: #181829;
+}
+.tag.dead {
+  background: #ff4c4c;
+  color: #fff;
+}
+.tag.unknown {
+  background: #baffd9;
+  color: #23233a;
+}
+.tag.species {
+  background: #4cffb3;
+  color: #181829;
+}
+@media (max-width: 1100px) {
+  .dashboard-main {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 700px) {
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .main-graph, .main-contacts {
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+  }
+  .contacts-list {
+    gap: 0.5rem;
+  }
+  .contact-avatar {
+    width: 36px;
+    height: 36px;
+  }
+} 

@@ -1,0 +1,20 @@
+<div class="login-container">
+  <div class="login-illustration">
+    <!-- SVG ou imagem ilustrativa -->
+    <img src="assets/eu_grafico.png" alt="Ilustração Login" />
+    <div class="login-text">
+      <h1>Faça login<br><span>E entre para o nosso time</span></h1>
+    </div>
+  </div>
+  <div class="login-form-card">
+    <h2>LOGIN</h2>
+    <form (ngSubmit)="onSubmit()">
+      <label for="username">Usuário</label>
+      <input id="username" name="username" type="text" [(ngModel)]="username" placeholder="Usuário" required />
+      <label for="password">Senha</label>
+      <input id="password" name="password" type="password" [(ngModel)]="password" placeholder="Senha" required />
+      <div class="forgot"><a href="#">Recuperar senha?</a></div>
+      <button type="submit">LOGIN</button>
+    </form>
+  </div>
+</div>
