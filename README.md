@@ -58,7 +58,7 @@ Este projeto é uma aplicação Angular que implementa autenticação JWT, com f
 
 1. **Clone o repositório e acesse a pasta:**
    ```bash
-   git clone [<url-do-repositorio>](https://github.com/adisiojunior/jwt-auth-angular-v2)
+   git clone https://github.com/adisiojunior/jwt-auth-angular-v2
    cd jwt-auth-angular-v2
    ```
 
